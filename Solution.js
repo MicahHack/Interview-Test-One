@@ -21,7 +21,6 @@ const expenses = {
     "2023-04": {}
 };
 function solution(expenses) {
-    var result = null;
     var monthlyMedians = [];
     
     for (var month in expenses) {
@@ -80,12 +79,6 @@ function solution(expenses) {
         }
     }
     
-    // Calculate return value
-    var total = 0.00
-    for (let i = 0; i < monthlyMedians.length; i++) {
-        total += monthlyMedians[i];
-    }
-    result = (total / 2).toFixed(2);
-    return result 
+    return monthlyMedians;
 }
 console.log(solution(expenses));
